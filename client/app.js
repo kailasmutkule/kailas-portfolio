@@ -57,6 +57,26 @@ function App() {
 
   useEffect(() => {
     document.title = "Kailas Mutkule | Full-Stack Developer";
+
+    const revealItems = document.querySelectorAll(
+      ".reveal-on-scroll, .hero-reveal"
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
   }, []);
 
   const filteredProjects =
@@ -180,7 +200,7 @@ function App() {
             { className: "row align-items-center g-5" },
             React.createElement(
               "div",
-              { className: "col-lg-7" },
+              { className: "col-lg-7 hero-reveal hero-reveal-left" },
               React.createElement(
                 "span",
                 { className: "eyebrow" },
@@ -247,12 +267,21 @@ function App() {
             ),
             React.createElement(
               "div",
-              { className: "col-lg-5" },
+              { className: "col-lg-5 hero-reveal hero-reveal-right" },
               React.createElement(
                 "div",
                 { className: "hero-card" },
                 React.createElement("div", { className: "orb orb-one" }),
                 React.createElement("div", { className: "orb orb-two" }),
+                React.createElement(
+                  "div",
+                  { className: "profile-photo-wrap" },
+                  React.createElement("img", {
+                    src: "./assets/kailas-profile.png",
+                    alt: "Kailas Mutkule - Computer Engineering student and Full-Stack Developer",
+                    className: "profile-photo",
+                  }),
+                ),
                 React.createElement(
                   "div",
                   { className: "code-card" },
@@ -285,7 +314,7 @@ function App() {
 
       React.createElement(
         "section",
-        { id: "about", className: "section-padding" },
+        { id: "about", className: "section-padding reveal-on-scroll" },
         React.createElement(
           "div",
           { className: "container" },
@@ -354,7 +383,7 @@ function App() {
 
       React.createElement(
         "section",
-        { id: "skills", className: "section-padding section-dark" },
+        { id: "skills", className: "section-padding section-dark reveal-on-scroll" },
         React.createElement(
           "div",
           { className: "container" },
@@ -384,7 +413,7 @@ function App() {
 
       React.createElement(
         "section",
-        { id: "projects", className: "section-padding" },
+        { id: "projects", className: "section-padding reveal-on-scroll" },
         React.createElement(
           "div",
           { className: "container" },
@@ -476,7 +505,7 @@ function App() {
 
       React.createElement(
         "section",
-        { id: "contact", className: "section-padding section-dark" },
+        { id: "contact", className: "section-padding section-dark reveal-on-scroll" },
         React.createElement(
           "div",
           { className: "container" },
@@ -535,6 +564,48 @@ function App() {
                     null,
                     React.createElement("small", null, "Mobile"),
                     React.createElement("strong", null, "+91 9699721767"),
+                  ),
+                ),
+                React.createElement(
+                  "div",
+                  { className: "social-links-block" },
+                  React.createElement("small", null, "Connect with me"),
+                  React.createElement(
+                    "div",
+                    { className: "social-links" },
+                    React.createElement(
+                      "a",
+                      {
+                        href: "https://github.com/kailasmutkule",
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "social-link",
+                        "aria-label": "GitHub",
+                      },
+                      "GitHub ↗",
+                    ),
+                    React.createElement(
+                      "a",
+                      {
+                        href: "https://www.linkedin.com/in/kailas-mutkule",
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "social-link",
+                        "aria-label": "LinkedIn",
+                      },
+                      "LinkedIn ↗",
+                    ),
+                    React.createElement(
+                      "a",
+                      {
+                        href: "https://www.instagram.com/kailas_mutkule_18/",
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "social-link",
+                        "aria-label": "Instagram",
+                      },
+                      "Instagram ↗",
+                    ),
                   ),
                 ),
               ),
