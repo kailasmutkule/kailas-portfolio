@@ -59,7 +59,7 @@ function App() {
     document.title = "Kailas Mutkule | Full-Stack Developer";
 
     const revealItems = document.querySelectorAll(
-      ".reveal-on-scroll, .hero-reveal"
+      ".reveal-on-scroll, .hero-reveal",
     );
 
     const observer = new IntersectionObserver(
@@ -71,7 +71,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
 
     revealItems.forEach((item) => observer.observe(item));
@@ -103,11 +103,14 @@ function App() {
     setSending(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const response = await fetch(
+        "https://kailas-portfolio.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        },
+      );
 
       const data = await response.json();
 
@@ -383,7 +386,10 @@ function App() {
 
       React.createElement(
         "section",
-        { id: "skills", className: "section-padding section-dark reveal-on-scroll" },
+        {
+          id: "skills",
+          className: "section-padding section-dark reveal-on-scroll",
+        },
         React.createElement(
           "div",
           { className: "container" },
@@ -505,7 +511,10 @@ function App() {
 
       React.createElement(
         "section",
-        { id: "contact", className: "section-padding section-dark reveal-on-scroll" },
+        {
+          id: "contact",
+          className: "section-padding section-dark reveal-on-scroll",
+        },
         React.createElement(
           "div",
           { className: "container" },
