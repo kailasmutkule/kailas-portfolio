@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: ["https://kailasmutkule.netlify.app/"],
+    origin: ["https://kailasmutkule.netlify.app"],
   }),
 );
 const PORT = process.env.PORT || 5000;
@@ -95,8 +95,8 @@ async function startServer() {
     );
   }
 
-  app.listen(PORT, () => {
-    console.log(`Portfolio running on http://localhost:${PORT}`);
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Portfolio API running on port ${PORT}`);
   });
 }
 
