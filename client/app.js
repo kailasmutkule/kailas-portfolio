@@ -56,7 +56,8 @@ function App() {
   const [sending, setSending] = useState(false);
 
   useEffect(() => {
-    document.title = "Kailas Mutkule | Full-Stack Developer";
+    document.title =
+      "Kailas Mutkule | Full-Stack Developer & Computer Engineering Student";
 
     const revealItems = document.querySelectorAll(
       ".reveal-on-scroll, .hero-reveal",
