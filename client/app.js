@@ -397,6 +397,16 @@ function App() {
                 },
                 "I'm a Computer Engineering student and Full-Stack Developer who builds clean, responsive and practical web applications using React, Node.js, Express.js, MongoDB and modern web technologies.",
               ),
+              React.createElement(
+                "a",
+                {
+                  className: "btn btn-outline-light-custom",
+                  href: "./assets/resume.pdf",
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                },
+                "View Resume ↗",
+              ),
 
               React.createElement(
                 "div",
@@ -412,6 +422,17 @@ function App() {
                     type: "button",
                   },
                   "View My Work",
+                ),
+
+                React.createElement(
+                  "a",
+                  {
+                    className: "btn btn-outline-light-custom",
+                    href: "./assets/resume.pdf",
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  "View Resume ↗",
                 ),
 
                 React.createElement(
