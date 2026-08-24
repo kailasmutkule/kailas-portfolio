@@ -27,6 +27,15 @@ const skills = [
 
 const projects = [
   {
+    title: "SigmaGPT",
+    category: "AI / Full Stack",
+    description:
+      "An AI-powered conversational web application that provides an interactive chat experience through a responsive interface with deployed frontend and backend services.",
+    tech: ["React", "Vite", "Node.js", "Express.js", "AI API"],
+    github: "https://github.com/kailasmutkule/SigmaGPT",
+    live: "https://sigmagpt1.netlify.app/",
+  },
+  {
     title: "Wanderlust",
     category: "Full Stack",
     description:
@@ -50,8 +59,8 @@ const projects = [
     description:
       "A responsive personal portfolio website for Kailas Mutkule, built to showcase Full-Stack Development skills, projects, education, technical experience and contact information.",
     tech: ["React", "Bootstrap", "Node.js", "Express.js"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/kailasmutkule/kailas-portfolio",
+    live: "https://kailasmutkule.netlify.app/",
   },
 ];
 
