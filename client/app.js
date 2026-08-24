@@ -28,7 +28,7 @@ const skills = [
 const projects = [
   {
     title: "SigmaGPT",
-    category: "AI / Full Stack",
+    category: "AI",
     description:
       "An AI-powered conversational web application that provides an interactive chat experience through a responsive interface with deployed frontend and backend services.",
     tech: ["React", "Vite", "Node.js", "Express.js", "AI API"],
