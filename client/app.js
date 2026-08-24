@@ -172,9 +172,6 @@ function App() {
     setSending(true);
 
     try {
-      /*
-       * Backend deployed on Render
-       */
       const response = await fetch(
         "https://kailas-portfolio-backend.onrender.com/api/contact",
         {
@@ -244,10 +241,6 @@ function App() {
           className: "container",
         },
 
-        /*
-         * Brand
-         */
-
         React.createElement(
           "a",
           {
@@ -260,19 +253,11 @@ function App() {
 
           "Kailas Mutkule",
 
-          React.createElement(
-            "span",
-            {
-              className: "brand-dot",
-              "aria-hidden": "true",
-            },
-            "",
-          ),
+          React.createElement("span", {
+            className: "brand-dot",
+            "aria-hidden": "true",
+          }),
         ),
-
-        /*
-         * Mobile menu button
-         */
 
         React.createElement(
           "button",
@@ -291,10 +276,6 @@ function App() {
             className: "navbar-toggler-icon",
           }),
         ),
-
-        /*
-         * Navigation links
-         */
 
         React.createElement(
           "div",
@@ -375,10 +356,6 @@ function App() {
               className: "row align-items-center g-5",
             },
 
-            /*
-             * Hero text
-             */
-
             React.createElement(
               "div",
               {
@@ -392,10 +369,6 @@ function App() {
                 },
                 "THIRD-YEAR COMPUTER ENGINEERING STUDENT",
               ),
-
-              /*
-               * Main SEO heading
-               */
 
               React.createElement(
                 "h1",
@@ -425,10 +398,6 @@ function App() {
                 "I'm a Computer Engineering student and Full-Stack Developer who builds clean, responsive and practical web applications using React, Node.js, Express.js, MongoDB and modern web technologies.",
               ),
 
-              /*
-               * Hero buttons
-               */
-
               React.createElement(
                 "div",
                 {
@@ -456,10 +425,6 @@ function App() {
                 ),
               ),
 
-              /*
-               * Hero statistics
-               */
-
               React.createElement(
                 "div",
                 {
@@ -470,36 +435,28 @@ function App() {
                 React.createElement(
                   "div",
                   null,
-
                   React.createElement("strong", null, "8.5"),
-
                   React.createElement("span", null, "CGPA"),
                 ),
 
                 React.createElement(
                   "div",
                   null,
-
                   React.createElement("strong", null, "87.30%"),
-
                   React.createElement("span", null, "Diploma"),
                 ),
 
                 React.createElement(
                   "div",
                   null,
-
                   React.createElement("strong", null, "MERN"),
-
                   React.createElement("span", null, "Stack"),
                 ),
               ),
             ),
 
             /*
-             * ====================================================
              * PROFILE PHOTO
-             * ====================================================
              */
 
             React.createElement(
@@ -540,10 +497,6 @@ function App() {
                     height: "500",
                   }),
                 ),
-
-                /*
-                 * Developer code card
-                 */
 
                 React.createElement(
                   "div",
@@ -596,7 +549,7 @@ function App() {
         "section",
         {
           id: "about",
-          className: "section-padding reveal-on-scroll",
+          className: "section-padding about-section reveal-on-scroll",
           "aria-labelledby": "about-title",
         },
 
@@ -607,115 +560,346 @@ function App() {
           },
 
           React.createElement(
-            "p",
+            "div",
             {
-              className: "section-label",
+              className: "about-heading reveal-child",
             },
-            "ABOUT ME",
-          ),
 
-          React.createElement(
-            "h2",
-            {
-              id: "about-title",
-              className: "section-title",
-            },
-            "About Kailas Mutkule",
+            React.createElement(
+              "div",
+              {
+                className: "section-label",
+              },
+              "ABOUT ME",
+            ),
+
+            React.createElement(
+              "h2",
+              {
+                id: "about-title",
+                className: "section-title",
+              },
+              "Turning Ideas Into Practical Technology",
+            ),
+
+            React.createElement("div", {
+              className: "section-accent",
+              "aria-hidden": "true",
+            }),
           ),
 
           React.createElement(
             "div",
             {
-              className: "row g-5 mt-2",
+              className: "row g-5 mt-3 align-items-start",
             },
 
             /*
-             * About text
+             * ABOUT CONTENT
              */
 
             React.createElement(
               "div",
               {
-                className: "col-lg-8",
-              },
-
-              React.createElement(
-                "p",
-                {
-                  className: "about-text",
-                },
-                "I'm Kailas Mutkule, a third-year Computer Engineering student at ISBM College of Engineering, affiliated with Savitribai Phule Pune University, with a current CGPA of 8.5. I'm passionate about Full-Stack Web Development and enjoy building practical applications that solve real-world problems.",
-              ),
-
-              React.createElement(
-                "p",
-                {
-                  className: "about-text",
-                },
-                "I completed my Diploma in Computer Engineering from Government Polytechnic Nagpur with 87.30%. My diploma final-year project focused on Real-Time Data Processing using Java, Apache Flink, Apache Kafka, and Ubuntu, where I gained practical experience in stream processing and data analytics.",
-              ),
-
-              React.createElement(
-                "p",
-                {
-                  className: "about-text",
-                },
-                "During my internship at RB Tech Services, I developed Wanderlust, a full-stack web application where users can list hotels, explore properties, make bookings, and share reviews. This project strengthened my skills in Java, JavaScript, Node.js, Express.js, MongoDB, SQL, HTML, CSS, Git, and REST APIs.",
-              ),
-
-              React.createElement(
-                "p",
-                {
-                  className: "about-text",
-                },
-                "I'm continuously improving my problem-solving skills, learning Data Structures & Algorithms, and building projects to prepare for a Software Engineer role. I'm always excited to connect with developers, recruiters, and tech enthusiasts.",
-              ),
-            ),
-
-            /*
-             * Education card
-             */
-
-            React.createElement(
-              "div",
-              {
-                className: "col-lg-4",
+                className: "col-lg-7",
               },
 
               React.createElement(
                 "div",
                 {
-                  className: "info-card",
+                  className: "about-content-card",
                 },
 
                 React.createElement(
-                  "h3",
+                  "div",
                   {
-                    className: "h5",
+                    className: "about-intro",
                   },
-                  "Education",
+
+                  React.createElement(
+                    "span",
+                    {
+                      className: "about-number",
+                    },
+                    "01",
+                  ),
+
+                  React.createElement(
+                    "p",
+                    {
+                      className: "about-text about-highlight",
+                    },
+                    "I'm Kailas Mutkule, a third-year Computer Engineering student at ISBM College of Engineering, affiliated with Savitribai Phule Pune University, with a current CGPA of 8.5. I'm passionate about Full-Stack Web Development and enjoy building practical applications that solve real-world problems.",
+                  ),
                 ),
 
-                React.createElement("p", null, "B.E. Computer Engineering"),
-
                 React.createElement(
-                  "small",
-                  null,
-                  "ISBM College of Engineering",
+                  "div",
+                  {
+                    className: "about-item",
+                  },
+
+                  React.createElement(
+                    "span",
+                    {
+                      className: "about-number",
+                    },
+                    "02",
+                  ),
+
+                  React.createElement(
+                    "p",
+                    {
+                      className: "about-text",
+                    },
+                    "I completed my Diploma in Computer Engineering from Government Polytechnic Nagpur with 87.30%. My diploma final-year project focused on Real-Time Data Processing using Java, Apache Flink, Apache Kafka, and Ubuntu, where I gained practical experience in stream processing and data analytics.",
+                  ),
                 ),
 
-                React.createElement("hr"),
-
                 React.createElement(
-                  "p",
-                  null,
-                  "Diploma in Computer Engineering",
+                  "div",
+                  {
+                    className: "about-item",
+                  },
+
+                  React.createElement(
+                    "span",
+                    {
+                      className: "about-number",
+                    },
+                    "03",
+                  ),
+
+                  React.createElement(
+                    "p",
+                    {
+                      className: "about-text",
+                    },
+                    "During my internship at RB Tech Services, I developed Wanderlust, a full-stack web application where users can list hotels, explore properties, make bookings, and share reviews. This project strengthened my skills in Java, JavaScript, Node.js, Express.js, MongoDB, SQL, HTML, CSS, Git, and REST APIs.",
+                  ),
                 ),
 
                 React.createElement(
-                  "small",
-                  null,
-                  "Government Polytechnic Nagpur • 87.30%",
+                  "div",
+                  {
+                    className: "about-item",
+                  },
+
+                  React.createElement(
+                    "span",
+                    {
+                      className: "about-number",
+                    },
+                    "04",
+                  ),
+
+                  React.createElement(
+                    "p",
+                    {
+                      className: "about-text",
+                    },
+                    "I'm continuously improving my problem-solving skills, learning Data Structures & Algorithms, and building projects to prepare for a Software Engineer role. I'm always excited to connect with developers, recruiters, and tech enthusiasts.",
+                  ),
+                ),
+              ),
+            ),
+
+            /*
+             * EDUCATION TIMELINE
+             */
+
+            React.createElement(
+              "div",
+              {
+                className: "col-lg-5",
+              },
+
+              React.createElement(
+                "div",
+                {
+                  className: "education-wrapper",
+                },
+
+                React.createElement(
+                  "div",
+                  {
+                    className: "education-heading",
+                  },
+
+                  React.createElement(
+                    "span",
+                    {
+                      className: "education-icon",
+                      "aria-hidden": "true",
+                    },
+                    "🎓",
+                  ),
+
+                  React.createElement(
+                    "div",
+                    null,
+
+                    React.createElement(
+                      "span",
+                      {
+                        className: "education-label",
+                      },
+                      "EDUCATION",
+                    ),
+
+                    React.createElement("h3", null, "Academic Journey"),
+                  ),
+                ),
+
+                React.createElement(
+                  "div",
+                  {
+                    className: "education-timeline",
+                  },
+
+                  /*
+                   * B.E.
+                   */
+
+                  React.createElement(
+                    "article",
+                    {
+                      className: "education-card",
+                    },
+
+                    React.createElement("div", {
+                      className: "education-dot",
+                      "aria-hidden": "true",
+                    }),
+
+                    React.createElement(
+                      "div",
+                      {
+                        className: "education-card-top",
+                      },
+
+                      React.createElement(
+                        "span",
+                        {
+                          className: "education-year",
+                        },
+                        "2024 – 2028",
+                      ),
+
+                      React.createElement(
+                        "span",
+                        {
+                          className: "education-status",
+                        },
+                        "CURRENT",
+                      ),
+                    ),
+
+                    React.createElement(
+                      "h4",
+                      null,
+                      "B.E. Computer Engineering",
+                    ),
+
+                    React.createElement(
+                      "p",
+                      {
+                        className: "education-institute",
+                      },
+                      "ISBM College of Engineering",
+                    ),
+
+                    React.createElement(
+                      "p",
+                      {
+                        className: "education-university",
+                      },
+                      "Affiliated with Savitribai Phule Pune University",
+                    ),
+
+                    React.createElement(
+                      "div",
+                      {
+                        className: "education-result",
+                      },
+
+                      React.createElement("strong", null, "8.5"),
+
+                      React.createElement("span", null, "Current CGPA"),
+                    ),
+                  ),
+
+                  /*
+                   * Diploma
+                   */
+
+                  React.createElement(
+                    "article",
+                    {
+                      className: "education-card",
+                    },
+
+                    React.createElement("div", {
+                      className: "education-dot",
+                      "aria-hidden": "true",
+                    }),
+
+                    React.createElement(
+                      "div",
+                      {
+                        className: "education-card-top",
+                      },
+
+                      React.createElement(
+                        "span",
+                        {
+                          className: "education-year",
+                        },
+                        "2022 – 2024",
+                      ),
+
+                      React.createElement(
+                        "span",
+                        {
+                          className: "education-status completed",
+                        },
+                        "COMPLETED",
+                      ),
+                    ),
+
+                    React.createElement(
+                      "h4",
+                      null,
+                      "Diploma in Computer Engineering",
+                    ),
+
+                    React.createElement(
+                      "p",
+                      {
+                        className: "education-institute",
+                      },
+                      "Government Polytechnic Nagpur",
+                    ),
+
+                    React.createElement(
+                      "p",
+                      {
+                        className: "education-university",
+                      },
+                      "Computer Engineering",
+                    ),
+
+                    React.createElement(
+                      "div",
+                      {
+                        className: "education-result",
+                      },
+
+                      React.createElement("strong", null, "87.30%"),
+
+                      React.createElement("span", null, "Final Percentage"),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -820,10 +1004,6 @@ function App() {
             "Projects & Web Applications",
           ),
 
-          /*
-           * Project filters
-           */
-
           React.createElement(
             "div",
             {
@@ -847,10 +1027,6 @@ function App() {
                 ),
             ),
           ),
-
-          /*
-           * Project cards
-           */
 
           React.createElement(
             "div",
@@ -883,7 +1059,9 @@ function App() {
                       ? "W"
                       : project.title === "Real-Time Data Processing"
                         ? "R"
-                        : "P",
+                        : project.title === "SigmaGPT"
+                          ? "S"
+                          : "P",
                   ),
 
                   React.createElement(
@@ -897,10 +1075,6 @@ function App() {
                   React.createElement("h3", null, project.title),
 
                   React.createElement("p", null, project.description),
-
-                  /*
-                   * Technologies
-                   */
 
                   React.createElement(
                     "div",
@@ -919,10 +1093,6 @@ function App() {
                       ),
                     ),
                   ),
-
-                  /*
-                   * Project links
-                   */
 
                   React.createElement(
                     "div",
@@ -1004,10 +1174,6 @@ function App() {
               className: "row g-5 mt-2",
             },
 
-            /*
-             * Contact information
-             */
-
             React.createElement(
               "div",
               {
@@ -1027,10 +1193,6 @@ function App() {
                 {
                   className: "contact-list",
                 },
-
-                /*
-                 * Email
-                 */
 
                 React.createElement(
                   "a",
@@ -1063,10 +1225,6 @@ function App() {
                   ),
                 ),
 
-                /*
-                 * Mobile
-                 */
-
                 React.createElement(
                   "a",
                   {
@@ -1094,10 +1252,6 @@ function App() {
                   ),
                 ),
 
-                /*
-                 * Social links
-                 */
-
                 React.createElement(
                   "div",
                   {
@@ -1112,10 +1266,6 @@ function App() {
                       className: "social-links",
                     },
 
-                    /*
-                     * GitHub
-                     */
-
                     React.createElement(
                       "a",
                       {
@@ -1128,10 +1278,6 @@ function App() {
                       "GitHub ↗",
                     ),
 
-                    /*
-                     * LinkedIn
-                     */
-
                     React.createElement(
                       "a",
                       {
@@ -1143,10 +1289,6 @@ function App() {
                       },
                       "LinkedIn ↗",
                     ),
-
-                    /*
-                     * Instagram
-                     */
 
                     React.createElement(
                       "a",
@@ -1163,12 +1305,6 @@ function App() {
                 ),
               ),
             ),
-
-            /*
-             * ====================================================
-             * CONTACT FORM
-             * ====================================================
-             */
 
             React.createElement(
               "div",
@@ -1189,10 +1325,6 @@ function App() {
                   {
                     className: "row g-3",
                   },
-
-                  /*
-                   * Name
-                   */
 
                   React.createElement(
                     "div",
@@ -1220,10 +1352,6 @@ function App() {
                       required: true,
                     }),
                   ),
-
-                  /*
-                   * Email
-                   */
 
                   React.createElement(
                     "div",
@@ -1253,10 +1381,6 @@ function App() {
                     }),
                   ),
 
-                  /*
-                   * Message
-                   */
-
                   React.createElement(
                     "div",
                     {
@@ -1284,10 +1408,6 @@ function App() {
                     }),
                   ),
 
-                  /*
-                   * Form status
-                   */
-
                   status.text &&
                     React.createElement(
                       "div",
@@ -1298,10 +1418,6 @@ function App() {
                       },
                       status.text,
                     ),
-
-                  /*
-                   * Submit button
-                   */
 
                   React.createElement(
                     "div",
